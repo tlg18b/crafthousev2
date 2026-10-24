@@ -30,16 +30,115 @@
     <section class="credits">
       <div class="credits__intro">
         <h1 class="title">Working Class</h1>
-        <p class="meta">Project details coming soon.</p>
-        <p class="synopsis">Project description coming soon.</p>
+        <p class="meta">69 minutes / Narrative Feature / Drama</p>
+        <p class="synopsis">When a reclusive architect is visited by his estranged, working-class family, he reveals a hidden secret: a wish-granting fairy. As old tensions resurface, the family must decide if it is a blessing, a curse, or a mirror to their own dysfunctions.</p>
       </div>
+
+      <!-- Right column -->
       <div class="credits__list">
+
         <div class="credit-group">
+          <h2 class="group-title">Cast</h2>
+          <div class="credit">
+            <p class="label">Starring</p>
+            <ul>
+              <li>Matrell Smith</li>
+              <li>Cindy Peralta</li>
+              <li>Kassidy Charles</li>
+              <li>Clyde McAllister</li>
+              <li>Roberta Pikser</li>
+            </ul>
+          </div>
+        </div>
+      <div class="credit-group">
           <h2 class="group-title">Credits</h2>
           <div class="credit">
-            <p class="label">Project details</p>
-            <ul><li>Coming soon</li></ul>
+            <p class="label">Writer &amp; Director</p>
+            <ul><li>Travaé Davis</li></ul>
           </div>
+          <div class="credit">
+            <p class="label">Producers</p>
+            <ul>
+              <li>Jaelyn Ellis</li>
+              <li>Travaé Davis</li>
+            </ul>
+          </div>
+          <div class="credit">
+            <p class="label">Associate Producers</p>
+            <ul>
+              <li>Alex Taylor</li>
+              <li>Francesca Poliseno</li>
+            </ul>
+          </div>
+          <div class="credit">
+            <p class="label">Production Designer</p>
+            <ul><li>Amal Qureshi</li></ul>
+          </div>
+          <div class="credit">
+            <p class="label">Editor</p>
+            <ul><li>Travaé Davis</li></ul>
+          </div>
+          <div class="credit">
+            <p class="label">Post Sound Mixer</p>
+            <ul><li>Jesse A. Lewis</li></ul>
+          </div>
+          <div class="credit">
+            <p class="label">Composer</p>
+            <ul><li>Lou Moran</li></ul>
+          </div>
+          <div class="credit">
+            <p class="label">Costume Designer</p>
+            <ul><li>Abbigail Huynh</li></ul>
+          </div>
+          <div class="credit">
+            <p class="label">Costume Designer</p>
+            <ul><li>Olivia Battles</li></ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="carousel">
+      <div class="carousel-header">
+        <h2 class="section-title">Gallery</h2>
+        <div class="carousel-nav">
+          <button type="button" data-slide="0" aria-label="Show image 1"></button>
+          <button type="button" data-slide="1" aria-label="Show image 2"></button>
+          <button type="button" data-slide="2" aria-label="Show image 3"></button>
+          <button type="button" data-slide="3" aria-label="Show image 4"></button>
+          <button type="button" data-slide="4" aria-label="Show image 5"></button>
+          <button type="button" data-slide="5" aria-label="Show image 6"></button>
+          <button type="button" data-slide="6" aria-label="Show image 7"></button>
+          <button type="button" data-slide="7" aria-label="Show image 8"></button>
+        </div>
+      </div>
+
+      <div class="carousel-track">
+        <div class="carousel-slide">
+          <img src="../media/workingclass1.jpg" alt="">
+        </div>
+        <div class="carousel-slide">
+          <img src="../media/workingclass2.jpg" alt="">
+        </div>
+        <div class="carousel-slide">
+          <img src="../media/workingclass3.jpg" alt="">
+        </div>
+        <div class="carousel-slide">
+          <img src="../media/workingclass4.jpg" alt="">
+        </div>
+        <div class="carousel-slide">
+          <img src="../media/workingclass5.jpg" alt="">
+        </div>
+        <div class="carousel-slide">
+          <img src="../media/workingclass6.jpg" alt="">
+        </div>
+        <div class="carousel-slide">
+          <img src="../media/workingclass7.png" alt="">
+        </div>
+        <div class="carousel-slide">
+          <img src="../media/workingclass8.png" alt="">
         </div>
       </div>
     </section>
@@ -85,5 +184,19 @@
       </div>
     </div>
   </footer>
+  <script>
+    const galleryTrack = document.querySelector('.carousel-track');
+    document.querySelectorAll('.carousel-nav button').forEach(function (button) {
+      button.addEventListener('click', function () {
+        const slide = galleryTrack.children[Number(button.dataset.slide)];
+        if (!slide) return;
+
+        const left = slide.getBoundingClientRect().left
+                   - galleryTrack.getBoundingClientRect().left
+                   + galleryTrack.scrollLeft;
+        galleryTrack.scrollLeft = left;
+      });
+    });
+  </script>
 </body>
 </html>

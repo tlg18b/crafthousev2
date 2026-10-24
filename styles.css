@@ -63,9 +63,12 @@ a { color: inherit; text-decoration: none; }
   z-index: 1;
 }
 
-.bg.is-active img,
-.bg.is-active video {
+.bg.is-active img {
   transform: scale(1);                   /* slow settle on entry */
+}
+
+.bg.is-active video {
+  transform: scale(1.06);
 }
 
 /* Darkens the image so type stays legible, heavier on the left + bottom */
@@ -228,6 +231,7 @@ a { color: inherit; text-decoration: none; }
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   :root { --dur: .01s; --dur-list: .01s; }
-  .bg img, .bg video { transform: none !important; transition: none; }
+  .bg img { transform: none !important; transition: none; }
+  .bg video { transform: scale(1.06) !important; transition: none; }
   .header, .projects, .tagline { animation: none; }
 }
