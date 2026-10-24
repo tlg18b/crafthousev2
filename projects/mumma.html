@@ -212,6 +212,19 @@
     video.addEventListener('play', function () {
       playButton.style.display = 'none';
     });
+
+    const galleryTrack = document.querySelector('.carousel-track');
+    document.querySelectorAll('.carousel-nav button').forEach(function (button) {
+      button.addEventListener('click', function () {
+        const slide = galleryTrack.children[Number(button.dataset.slide)];
+        if (!slide) return;
+
+        const left = slide.getBoundingClientRect().left
+                   - galleryTrack.getBoundingClientRect().left
+                   + galleryTrack.scrollLeft;
+        galleryTrack.scrollLeft = left;
+      });
+    });
   </script>
 </body>
 </html>
