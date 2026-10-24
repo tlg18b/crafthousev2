@@ -1,0 +1,14 @@
+@import url("munchies.css");
+
+.hero--placeholder {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #35302c, #111 62%, #514638);
+  color: #fff;
+}
+
+.hero--placeholder p {
+  font-size: clamp(16px, 2vw, 24px);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
