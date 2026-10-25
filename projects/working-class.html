@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="working-class.css">
+  <link rel="stylesheet" href="../mobile-nav.css">
 </head>
 <body>
   <header class="header">
@@ -20,18 +21,33 @@
     <a href="../index.html" class="logo-link"><img src="../logo-black.png" alt="Crafthouse"></a>
     <nav class="nav nav--right" aria-label="Social">
       <a href="https://www.instagram.com/crafthousepictures" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.linkedin.com/company/crafthousepictures" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.linkedin.com/company/craft-house-pictures" target="_blank" rel="noopener">LinkedIn</a>
     </nav>
   </header>
-  <section class="hero" aria-label="Working Class artwork">
-    <img class="hero__media" src="../media/workingclass.png" alt="Working Class project artwork">
+  <!-- TRAILER -->
+  <section class="hero">
+    <video
+      id="hero-video"
+      class="hero__media"
+      src="../media/working-class trailer.mp4"
+      poster="../media/workingclass.png"
+      controls loop playsinline preload="metadata">
+    </video>
+
+    <div class="hero__scrim"></div>
+
+    <button type="button" class="hero__play-btn" id="play-trigger" aria-label="Play trailer">
+      <img src="../media/play.png" alt="">
+    </button>
   </section>
+
   <main>
     <section class="credits">
       <div class="credits__intro">
         <h1 class="title">Working Class</h1>
         <p class="meta">69 minutes / Narrative Feature / Drama</p>
         <p class="synopsis">When a reclusive architect is visited by his estranged, working-class family, he reveals a hidden secret: a wish-granting fairy. As old tensions resurface, the family must decide if it is a blessing, a curse, or a mirror to their own dysfunctions.</p>
+        <p class="meta">Currently in festival run, link available upon request.</p>
       </div>
 
       <!-- Right column -->
@@ -172,7 +188,7 @@
         <h2 class="footer-heading">Drop a Line</h2>
         <ul>
           <li><a href="https://www.instagram.com/crafthousepictures" target="_blank" rel="noopener">INSTAGRAM</a></li>
-          <li><a href="https://www.linkedin.com/company/crafthousepictures" target="_blank" rel="noopener">LINKEDIN</a></li>
+          <li><a href="https://www.linkedin.com/company/craft-house-pictures" target="_blank" rel="noopener">LINKEDIN</a></li>
         </ul>
       </div>
     </div>
@@ -185,6 +201,18 @@
     </div>
   </footer>
   <script>
+      // Trailer: the play button starts the video and hides itself once it's playing
+    const video = document.getElementById('hero-video');
+    const playButton = document.getElementById('play-trigger');
+
+    playButton.addEventListener('click', function () {
+      video.play();
+    });
+
+    video.addEventListener('play', function () {
+      playButton.style.display = 'none';
+    });
+
     const galleryTrack = document.querySelector('.carousel-track');
     document.querySelectorAll('.carousel-nav button').forEach(function (button) {
       button.addEventListener('click', function () {
@@ -198,5 +226,6 @@
       });
     });
   </script>
+  <script src="../mobile-nav.js"></script>
 </body>
 </html>

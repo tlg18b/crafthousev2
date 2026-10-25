@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="spoils-of-office.css">
+  <link rel="stylesheet" href="../mobile-nav.css">
 </head>
 <body>
   <header class="header">
@@ -20,27 +21,105 @@
     <a href="../index.html" class="logo-link"><img src="../logo-black.png" alt="Crafthouse"></a>
     <nav class="nav nav--right" aria-label="Social">
       <a href="https://www.instagram.com/crafthousepictures" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.linkedin.com/company/crafthousepictures" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.linkedin.com/company/craft-house-pictures" target="_blank" rel="noopener">LinkedIn</a>
     </nav>
   </header>
-  <section class="hero hero--placeholder" aria-label="Spoils of Office trailer">
-    <p>Trailer coming soon</p>
+   <!-- TRAILER -->
+  <section class="hero">
+    <video
+      id="hero-video"
+      class="hero__media"
+      src="../media/spoils-of-office trailer.mp4"
+      poster="../media/spoils-of-office.png"
+      controls loop playsinline preload="metadata">
+    </video>
+
+    <div class="hero__scrim"></div>
+
+    <button type="button" class="hero__play-btn" id="play-trigger" aria-label="Play trailer">
+      <img src="../media/play.png" alt="">
+    </button>
   </section>
+
   <main>
     <section class="credits">
       <div class="credits__intro">
         <h1 class="title">Spoils of Office</h1>
-        <p class="meta">Project details coming soon.</p>
-        <p class="synopsis">Project description coming soon.</p>
+        <p class="meta">Narrative short / Drama</p>
+        <p class="synopsis">In the wake of a local tragedy, a mayor in a tight re-election race faces mounting pressure to back a morally compromising bill – caught between her idealistic daughter and the Party deal that could save her campaign.</p>
+        <p class="meta">Currently in festival run, link available upon request.</p>
       </div>
+      <!-- Right column -->
       <div class="credits__list">
+
+        <div class="credit-group">
+          <h2 class="group-title">Cast</h2>
+          <div class="credit">
+            <p class="label">Starring</p>
+            <ul>
+              <li>Gisela Adisa</li>
+              <li>Jessica Bronwen</li>
+            </ul>
+          </div>
+        </div>
+
         <div class="credit-group">
           <h2 class="group-title">Credits</h2>
           <div class="credit">
-            <p class="label">Project details</p>
-            <ul><li>Coming soon</li></ul>
+            <p class="label">Writer &amp; Director</p>
+            <ul><li>Jaelyn Ellis</li></ul>
+          </div>
+          <div class="credit">
+            <p class="label">Producers</p>
+            <ul>
+              <li>Jaelyn Ellis</li>
+              <li>Olivia Andrade</li>
+              <li>Pavit Gandhi</li>
+            </ul>
+          </div>
+          <div class="credit">
+            <p class="label">Executive Producers</p>
+            <ul>
+              <li>Ana Verde</li>
+              <li>Taylor Wildenhaus</li>
+              <li>Brenda Robinson</li>
+              <li>Jennifer Westphal</li>
+              <li>James Heyward</li>
+              <li>Lily Heyward</li>
+              <li>Tyrone Ellis</li>
+              <li>Dr. Jamelle Ellis</li>
+            </ul>
+          </div>
+          <div class="credit">
+            <p class="label">Director of Photography</p>
+            <ul><li>Emily Walowski</li></ul>
+          </div>
+          <div class="credit">
+            <p class="label">Production Designer</p>
+            <ul><li>Amal Quershi</li></ul>
+          </div>
+          <div class="credit">
+            <p class="label">Editor</p>
+            <ul><li>Alana Nelson</li></ul>
+          </div>
+          <div class="credit">
+            <p class="label">Post Sound Mixer</p>
+            <ul><li>Hunter Hawke</li></ul>
+          </div>
+          <div class="credit">
+            <p class="label">Composer</p>
+            <ul><li>Jon Hatch</li></ul>
+          </div>
+          <div class="credit">
+            <p class="label">Casting Director</p>
+            <ul><li>Andrew Dahreddine</li></ul>
+          </div>
+          <div class="credit">
+            <p class="label">Costume Designer</p>
+            <ul><li>Nataly Berrio-Gil</li></ul>
           </div>
         </div>
+
       </div>
     </section>
   </main>
@@ -73,7 +152,7 @@
         <h2 class="footer-heading">Drop a Line</h2>
         <ul>
           <li><a href="https://www.instagram.com/crafthousepictures" target="_blank" rel="noopener">INSTAGRAM</a></li>
-          <li><a href="https://www.linkedin.com/company/crafthousepictures" target="_blank" rel="noopener">LINKEDIN</a></li>
+          <li><a href="https://www.linkedin.com/company/craft-house-pictures" target="_blank" rel="noopener">LINKEDIN</a></li>
         </ul>
       </div>
     </div>
@@ -85,5 +164,18 @@
       </div>
     </div>
   </footer>
+  <script src="../mobile-nav.js">
+    </script>
+    <script>
+
+    const video = document.getElementById('hero-video');
+    const playButton = document.getElementById('play-trigger');
+    playButton.addEventListener('click', function () {
+      video.play();
+    });
+    video.addEventListener('play', function () {
+      playButton.style.display = 'none';
+    });
+  </script>
 </body>
 </html>

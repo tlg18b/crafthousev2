@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="cicada.css">
+  <link rel="stylesheet" href="../mobile-nav.css">
 </head>
 <body>
   <header class="header">
@@ -20,11 +21,11 @@
     <a href="../index.html" class="logo-link"><img src="../logo-black.png" alt="Crafthouse"></a>
     <nav class="nav nav--right" aria-label="Social">
       <a href="https://www.instagram.com/crafthousepictures" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.linkedin.com/company/crafthousepictures" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.linkedin.com/company/craft-house-pictures" target="_blank" rel="noopener">LinkedIn</a>
     </nav>
   </header>
   <section class="hero" aria-label="Cicada trailer">
-    <video id="hero-video" class="hero__media" src="../media/cicada-trailer.mp4" poster="../media/cicada.png" muted loop playsinline preload="metadata"></video>
+    <video controls id="hero-video" class="hero__media" src="../media/cicada-trailer.mp4" poster="../media/cicada.png" muted loop playsinline preload="metadata"></video>
     <div class="hero__scrim"></div>
     <button type="button" class="hero__play-btn" id="play-trigger" aria-label="Play trailer">
       <img src="../media/play.png" alt="">
@@ -37,6 +38,7 @@
         <p class="meta">14 minutes / Narrative short / Drama</p>
         <p class="synopsis">When Will’s old flame shows up at his friends’ trip upstate, what starts as a casual reunion stirs feelings he’d just started to leave behind.
 </p>
+        <p class="meta">Currently in festival run, link available upon request.</p>
       </div>
       <!-- Right column -->
       <div class="credits__list">
@@ -161,7 +163,7 @@
         <h2 class="footer-heading">Drop a Line</h2>
         <ul>
           <li><a href="https://www.instagram.com/crafthousepictures" target="_blank" rel="noopener">INSTAGRAM</a></li>
-          <li><a href="https://www.linkedin.com/company/crafthousepictures" target="_blank" rel="noopener">LINKEDIN</a></li>
+          <li><a href="https://www.linkedin.com/company/craft-house-pictures" target="_blank" rel="noopener">LINKEDIN</a></li>
         </ul>
       </div>
     </div>
@@ -196,5 +198,6 @@
       });
     });
   </script>
+  <script src="../mobile-nav.js"></script>
 </body>
 </html>

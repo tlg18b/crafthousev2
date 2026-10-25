@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="bossanova.css">
+  <link rel="stylesheet" href="../mobile-nav.css">
 </head>
 <body>
   <header class="header">
@@ -20,11 +21,11 @@
     <a href="../index.html" class="logo-link"><img src="../logo-black.png" alt="Crafthouse"></a>
     <nav class="nav nav--right" aria-label="Social">
       <a href="https://www.instagram.com/crafthousepictures" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.linkedin.com/company/crafthousepictures" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.linkedin.com/company/craft-house-pictures" target="_blank" rel="noopener">LinkedIn</a>
     </nav>
   </header>
   <section class="hero" aria-label="Bossanova trailer">
-    <video id="hero-video" class="hero__media" src="../media/bossanova-trailer.mp4" poster="../media/bossanova.png" muted loop playsinline preload="metadata"></video>
+    <video controls id="hero-video" class="hero__media" src="../media/bossanova-trailer.mp4" poster="../media/bossanova.png" muted loop playsinline preload="metadata"></video>
     <div class="hero__scrim"></div>
     <button type="button" class="hero__play-btn" id="play-trigger" aria-label="Play trailer">
       <img src="../media/play.png" alt="">
@@ -36,6 +37,7 @@
         <h1 class="title">Bossanova</h1>
         <p class="meta">15 minutes / Narrative Short / Comedy-drama</p>
         <p class="synopsis">After a crushing defeat in his big comeback fight, a washed-up WWE star gets an unexpected lesson in self-acceptance from his drag queen son who takes his stagename.</p>
+        <p class="meta">Currently in festival run, link available upon request.</p>
       </div>
 
       <!-- Right column -->
@@ -124,31 +126,27 @@
           <button type="button" data-slide="3" aria-label="Show image 4"></button>
           <button type="button" data-slide="4" aria-label="Show image 5"></button>
           <button type="button" data-slide="5" aria-label="Show image 6"></button>
-          <button type="button" data-slide="6" aria-label="Show image 7"></button>
         </div>
       </div>
 
       <div class="carousel-track">
         <div class="carousel-slide">
-          <img src="../media/BOSSANOVA STILL_2.jpg" alt="">
+          <img src="../media/BOSSANOVA STILL_6.jpg" alt="">
+        </div>
+        <div class="carousel-slide">
+          <img src="../media/BOSSANOVA STILL_7.jpg" alt="">
         </div>
         <div class="carousel-slide">
           <img src="../media/BOSSANOVA STILL_1.jpg" alt="">
         </div>
         <div class="carousel-slide">
+          <img src="../media/BOSSANOVA STILL_2.jpg" alt="">
+        </div>
+        <div class="carousel-slide">
           <img src="../media/BOSSANOVA STILL_3.jpg" alt="">
         </div>
         <div class="carousel-slide">
-          <img src="../media/BOSSANOVA STILL_4.jpg" alt="">
-        </div>
-        <div class="carousel-slide">
           <img src="../media/BOSSANOVA STILL_5.jpg" alt="">
-        </div>
-        <div class="carousel-slide">
-          <img src="../media/BOSSANOVA STILL_6.jpg" alt="">
-        </div>
-        <div class="carousel-slide">
-          <img src="../media/BOSSANOVA STILL_7.jpg" alt="">
         </div>
       </div>
     </section>
@@ -183,7 +181,7 @@
         <h2 class="footer-heading">Drop a Line</h2>
         <ul>
           <li><a href="https://www.instagram.com/crafthousepictures" target="_blank" rel="noopener">INSTAGRAM</a></li>
-          <li><a href="https://www.linkedin.com/company/crafthousepictures" target="_blank" rel="noopener">LINKEDIN</a></li>
+          <li><a href="https://www.linkedin.com/company/craft-house-pictures" target="_blank" rel="noopener">LINKEDIN</a></li>
         </ul>
       </div>
     </div>
@@ -218,5 +216,6 @@
       });
     });
   </script>
+  <script src="../mobile-nav.js"></script>
 </body>
 </html>

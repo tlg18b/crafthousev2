@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="munchies.css">
+  <link rel="stylesheet" href="../mobile-nav.css">
 </head>
 <body>
 
@@ -26,7 +27,7 @@
 
     <nav class="nav nav--right" aria-label="Social">
       <a href="https://www.instagram.com/crafthousepictures" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.linkedin.com/company/crafthousepictures" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.linkedin.com/company/craft-house-pictures" target="_blank" rel="noopener">LinkedIn</a>
     </nav>
   </header>
 
@@ -34,11 +35,12 @@
   <!-- TRAILER -->
   <section class="hero">
     <video
+      controls
       id="hero-video"
       class="hero__media"
-      src="../media/munchies-trailer.mp4"
+      src="../media/munchies full trailer.mov"
       poster="../media/munchies.png"
-      muted loop playsinline preload="metadata">
+       loop playsinline preload="metadata">
     </video>
 
     <div class="hero__scrim"></div>
@@ -63,6 +65,7 @@
           complicated history stumble into a botched robbery at their local convenience store.
           They must squash their giggles and formulate a plan to make it out alive.
         </p>
+        <p class="meta">Currently in festival run, link available upon request.</p>
       </div>
 
       <!-- Right column -->
@@ -214,12 +217,9 @@
   <!-- FOOTER (same markup as mumma.html) -->
   <footer class="main-footer">
     <div class="footer-brand">
-      <a href="../index.html">
-        <img src="../media/footer-logo.png" alt="Crafthouse">
-      </a>
+      <a href="../index.html"><img src="../media/footer-logo.png" alt="Crafthouse"></a>
       <p class="about-sentence">We are a New York-based production company for bold, unexpected stories from underrepresented voices.</p>
     </div>
-
     <div class="links-container">
       <div class="footer-group">
         <h2 class="footer-heading">Navigation</h2>
@@ -229,27 +229,25 @@
           <li><a href="../news.html">NEWS</a></li>
         </ul>
       </div>
-
       <div class="footer-group">
         <h2 class="footer-heading">Projects</h2>
         <ul>
-          <li><a href="working-class.html">WORKING CLASS</a></li>
-          <li><a href="bossanova.html">BOSSANOVA</a></li>
           <li><a href="mumma.html">MUMMA</a></li>
           <li><a href="munchies.html">MUNCHIES</a></li>
           <li><a href="cicada.html">CICADA</a></li>
+          <li><a href="bossanova.html">BOSSANOVA</a></li>
+          <li><a href="working-class.html">WORKING CLASS</a></li>
+          <li><a href="spoils-of-office.html">SPOILS OF OFFICE</a></li>
         </ul>
       </div>
-
       <div class="footer-group">
         <h2 class="footer-heading">Drop a Line</h2>
         <ul>
           <li><a href="https://www.instagram.com/crafthousepictures" target="_blank" rel="noopener">INSTAGRAM</a></li>
-          <li><a href="#">LINKEDIN</a></li>
+          <li><a href="https://www.linkedin.com/company/craft-house-pictures" target="_blank" rel="noopener">LINKEDIN</a></li>
         </ul>
       </div>
     </div>
-
     <div class="footer-bottom">
       <hr class="footer-rule">
       <div class="tags">
@@ -306,6 +304,7 @@
       });
     });
   </script>
+  <script src="../mobile-nav.js"></script>
 
 </body>
 </html>

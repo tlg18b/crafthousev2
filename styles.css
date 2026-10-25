@@ -1,6 +1,6 @@
 /* ---------- Tokens ---------- */
 :root {
-  --ink: #fff;
+  
   --pad: 20px;
   --pitch: 3.6rem;                       /* vertical distance between list items */
   --ease: cubic-bezier(0.65, 0, 0.35, 1);
@@ -17,7 +17,7 @@ html, body {
   margin: 0;
   height: 100%;
   background: #000;
-  color: var(--ink);
+  color: #111;
   font-family: var(--font);
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
@@ -103,6 +103,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 14px;
   font-weight: 300;
   text-transform: uppercase;
+  color: #fff;
 }
 
 .nav a:hover {
@@ -119,6 +120,7 @@ a { color: inherit; text-decoration: none; }
   position: relative;
   opacity: 1;
   transition: opacity 0.3s var(--ease);
+  color: #fff;
 }
 
 
@@ -133,6 +135,7 @@ a { color: inherit; text-decoration: none; }
   margin: 0;
   padding: 0;
   list-style: none;
+  color: #fff;
 }
 
 .project {
@@ -183,6 +186,7 @@ a { color: inherit; text-decoration: none; }
   margin: 0;
   font-size: 14px;
   font-weight: 300;
+  color: #fff;
 }
 
 .scroll-hint {
@@ -195,7 +199,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 13px;  /* same size as the project list */
   font-weight: 300;
   text-transform: uppercase;
-  
+  color: #fff;
 }
 
 /* ---------- Page-load intro ---------- */
@@ -214,17 +218,25 @@ a { color: inherit; text-decoration: none; }
 /* ---------- Mobile ---------- */
 @media (max-width: 720px) {
   .header { grid-template-columns: 1fr 1fr; row-gap: 20px; }
-  .logo { grid-column: 1 / -1; grid-row: 1; justify-self: center; }
+  .logo { grid-column: 1/-1; grid-row: 1; justify-self: center; }
   .nav--left  { grid-row: 2; }
   .nav--right { grid-row: 2; }
-  .nav { gap: 20px; }
+  .nav { 
+    gap: 20px;
+    font-size: 12px; 
+   }
 
-  .projects { top: auto; bottom: calc(var(--pad) + 5.5rem); width: 70vw; }
+  .projects { 
+    position: fixed;
+    top: 50%; 
+    bottom: calc(var(--pad) + 5.5rem); 
+    width: 70vw; }
   .tagline {
     left: var(--pad);
     right: var(--pad);
     max-width: none;
     font-size: .85rem;
+    text-align: center;
   }
 }
 
@@ -235,3 +247,4 @@ a { color: inherit; text-decoration: none; }
   .bg video { transform: scale(1.06) !important; transition: none; }
   .header, .projects, .tagline { animation: none; }
 }
+

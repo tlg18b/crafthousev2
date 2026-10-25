@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="mumma.css">
+  <link rel="stylesheet" href="../mobile-nav.css">
 </head>
 <body>
   <header class="header">
@@ -20,11 +21,11 @@
     <a href="../index.html" class="logo-link"><img src="../logo-black.png" alt="Crafthouse"></a>
     <nav class="nav nav--right" aria-label="Social">
       <a href="https://www.instagram.com/crafthousepictures" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.linkedin.com/company/crafthousepictures" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.linkedin.com/company/craft-house-pictures" target="_blank" rel="noopener">LinkedIn</a>
     </nav>
   </header>
   <section class="hero" aria-label="MUMMA trailer">
-    <video id="hero-video" class="hero__media" src="../media/mumma-trailer.mp4" poster="../media/mumma.png" muted loop playsinline preload="metadata"></video>
+    <video controls id="hero-video" class="hero__media" src="../media/mumma-trailer.mp4" poster="../media/mumma.png" muted loop playsinline preload="metadata"></video>
     <div class="hero__scrim"></div>
     <button type="button" class="hero__play-btn" id="play-trigger" aria-label="Play trailer">
       <img src="../media/play.png" alt="">
@@ -36,6 +37,7 @@
         <h1 class="title">MUMMA</h1>
         <p class="meta">10 minutes / Narrative short / Drama</p>
         <p class="synopsis">Donna, a newly arrived St. Lucian woman navigates the final weeks of her pregnancy, drawing strength from her grandmother Mumma while longing for her Caribbean roots while weaving a heartfelt tale of resilience, motherhood, and the enduring bond between generations.</p>
+        <p class="meta">Currently in festival run, link available upon request.</p>
       </div>
       <!-- Right column -->
       <div class="credits__list">
@@ -191,7 +193,7 @@
         <h2 class="footer-heading">Drop a Line</h2>
         <ul>
           <li><a href="https://www.instagram.com/crafthousepictures" target="_blank" rel="noopener">INSTAGRAM</a></li>
-          <li><a href="https://www.linkedin.com/company/crafthousepictures" target="_blank" rel="noopener">LINKEDIN</a></li>
+          <li><a href="https://www.linkedin.com/company/craft-house-pictures" target="_blank" rel="noopener">LINKEDIN</a></li>
         </ul>
       </div>
     </div>
@@ -226,5 +228,6 @@
       });
     });
   </script>
+  <script src="../mobile-nav.js"></script>
 </body>
 </html>
