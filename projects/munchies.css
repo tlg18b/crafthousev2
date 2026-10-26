@@ -478,6 +478,7 @@ h1, h2, h3, p { margin: 0; }
 
   .links-container { gap: 40px; }
   .footer-group { width: auto; min-width: 140px; }
+  .hero__play-btn { display: none; }
 }
 
 @media (max-width: 560px) {
