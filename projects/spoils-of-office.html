@@ -30,7 +30,7 @@
       id="hero-video"
       class="hero__media"
       src="../media/spoils-of-office trailer.mp4"
-      poster="../media/spoils-of-office.png"
+      poster="../media/spoils of office 4.png"
       controls loop playsinline preload="metadata">
     </video>
 
@@ -45,7 +45,7 @@
     <section class="credits">
       <div class="credits__intro">
         <h1 class="title">Spoils of Office</h1>
-        <p class="meta">Narrative short / Drama</p>
+        <p class="meta">13 minutes / Narrative short / Drama</p>
         <p class="synopsis">In the wake of a local tragedy, a mayor in a tight re-election race faces mounting pressure to back a morally compromising bill – caught between her idealistic daughter and the Party deal that could save her campaign.</p>
         <p class="meta">Currently in festival run, link available upon request.</p>
       </div>
@@ -122,6 +122,38 @@
 
       </div>
     </section>
+
+    <!-- GALLERY -->
+    <section class="carousel">
+      <div class="carousel-header">
+        <h2 class="section-title">Gallery</h2>
+        <div class="carousel-nav">
+          <button type="button" data-slide="0" aria-label="Show image 1"></button>
+          <button type="button" data-slide="1" aria-label="Show image 2"></button>
+          <button type="button" data-slide="2" aria-label="Show image 3"></button>
+          <button type="button" data-slide="3" aria-label="Show image 4"></button>
+          <button type="button" data-slide="4" aria-label="Show image 5"></button>
+        </div>
+      </div>
+
+      <div class="carousel-track">
+        <div class="carousel-slide">
+          <img src="../media/spoils of office 1.png" alt="">
+        </div>
+        <div class="carousel-slide">
+          <img src="../media/spoils of office 2.png" alt="">
+        </div>
+        <div class="carousel-slide">
+          <img src="../media/spoils of office 3.png" alt="">
+        </div>
+        <div class="carousel-slide">
+          <img src="../media/spoils of office 4.png" alt="">
+        </div>
+        <div class="carousel-slide">
+          <img src="../media/spoils of office 5.png" alt="">
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="main-footer">
     <div class="footer-brand">
@@ -175,6 +207,19 @@
     });
     video.addEventListener('play', function () {
       playButton.style.display = 'none';
+    });
+
+    const galleryTrack = document.querySelector('.carousel-track');
+    document.querySelectorAll('.carousel-nav button').forEach(function (button) {
+      button.addEventListener('click', function () {
+        const slide = galleryTrack.children[Number(button.dataset.slide)];
+        if (!slide) return;
+
+        const left = slide.getBoundingClientRect().left
+                   - galleryTrack.getBoundingClientRect().left
+                   + galleryTrack.scrollLeft;
+        galleryTrack.scrollTo({ left: left, behavior: 'smooth' });
+      });
     });
   </script>
 </body>
