@@ -211,6 +211,7 @@
 
     video.addEventListener('play', function () {
       playButton.style.display = 'none';
+      video.classList.add('is-playing');
     });
 
     const galleryTrack = document.querySelector('.carousel-track');

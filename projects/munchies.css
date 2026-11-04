@@ -68,7 +68,7 @@ h1, h2, h3, p { margin: 0; }
 .hero {
   position: relative;
   margin: 0 40px;
-  max-height: 55vh;
+  height: 55vh;
   overflow: hidden;
   border-radius: 8px;
   background: #000;
@@ -76,9 +76,12 @@ h1, h2, h3, p { margin: 0; }
 
 .hero__media {
   width: 100%;
-  height: auto;
-  object-fit: cover;   /* fills the frame with no black bars */
-  
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__media.is-playing {
+  object-fit: contain;
 }
 
 /* Dark fade at the bottom of the video */
@@ -461,7 +464,7 @@ h1, h2, h3, p { margin: 0; }
 @media (max-width: 768px) {
   /* Side margins shrink from 40px to 20px */
   .header { padding: 20px; }
-  .hero { margin: 0 20px; height: auto; }
+  .hero { margin: 0 20px; }
   .credits { margin: 0 20px; padding: 40px 0 56px; }
   .carousel { padding: 0 20px; }
   .festival-details { margin: 24px 20px 0; }
@@ -482,7 +485,6 @@ h1, h2, h3, p { margin: 0; }
 }
 
 @media (max-width: 560px) {
-  .hero { height: auto; }
   .title { font-size: 52px; }
 
   /* Credit label sits above the names instead of beside them */
